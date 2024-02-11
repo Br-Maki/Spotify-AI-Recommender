@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Recommendation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href = "styles/styles.css" rel="stylesheet">
+    <script src=" https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/openai@4.27.0/index.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <img class = "logo" src = "images/Sputify.png" alt = "Blue SPotify Logo">
+        <h1>Playlist Recommendation</h1>
+        <p>Get a list of recommended songs from OpenAI's GPT-3.5-turbo, Start by entering your playlist ID.. If you're unsure what that is, start <a href = "https://clients.caster.fm/knowledgebase/110/How-to-find-Spotify-playlist-ID.html" target="_blank">here</a>!</p>
+        <div class="form-group">
+            <input type="text" class="form-control" id="playlist" placeholder="Playlist ID">
+        </div>
+        <button id="submitButton" class="btn btn-primary">GO</button>
+        <div id="loading" class="mt-3" style="display: none;">
+            <p>Thinking of recommendations..</p>
+            <!-- Loading spinner (you can use Bootstrap spinner classes) -->
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    
+        <div id = "list" class="list-group"></div>
+
+        <div id="buttonContainer">
+            <div id = "Button1" class = "buttonDiv"></div>
+
+        <div id = "Button2" class = "buttonDiv"></div>
+
+        </div> 
+        
+    </div>
+
+     <script type= "module" src = "/app.js"></script>
+     <script type= "module" src = "js/index.js"></script>
+     <script type= "module" src = "js/openai.js"></script>
+     <script type= "module" src = "js/create.js"></script>
+</body>
+</html>
